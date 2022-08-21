@@ -3,6 +3,7 @@ import React from 'react'
 import SearchBar from '../components/SearchBar';
 import PokemonStats from '../components/PokemonStats';
 import Pokemon from '../components/Pokemon';
+import PokemonAbilities from '../components/PokemonAbilities';
 
 function App() {
   console.log("component rendered");
@@ -28,6 +29,16 @@ function App() {
       {
         type:{
           name:"poison"
+        }
+      }
+    ],
+    abilities:[
+      {
+        ability: {
+          name: "overgrow"
+        },
+        ability: {
+          name: "chlorophyll"
         }
       }
     ]
@@ -90,6 +101,11 @@ function App() {
         weight= {pokemon.weight}
         type1= {pokemon.types[0].type.name}
         type2={pokemon.types.length>1? pokemon.types[1].type.name: ""}
+      />
+
+      <PokemonAbilities
+        ability1={pokemon.abilities[0].ability.name}
+        ability2={pokemon.abilities.length>1? pokemon.abilities[1].ability.name:""}
       />
 
       {(changePokemon>1)&&<button onClick={prevPokemon}>Previous pokémon</button>}
