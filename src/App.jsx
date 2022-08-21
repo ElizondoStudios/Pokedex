@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar';
 import PokemonStats from '../components/PokemonStats';
 import Pokemon from '../components/Pokemon';
 import PokemonAbilities from '../components/PokemonAbilities';
+import PokemonMoves from '../components/PokemonMoves';
 
 function App() {
   console.log("component rendered");
@@ -36,7 +37,9 @@ function App() {
       {
         ability: {
           name: "overgrow"
-        },
+        }
+      },
+      {
         ability: {
           name: "chlorophyll"
         }
@@ -82,7 +85,7 @@ function App() {
       .then(res => {setChangePokemon(res.id)})
   }
   return (
-    <div>
+    <main>
       <SearchBar
         SearchFunc={SearchPokemon}
       />
@@ -108,10 +111,14 @@ function App() {
         ability2={pokemon.abilities.length>1? pokemon.abilities[1].ability.name:""}
       />
 
+      <PokemonMoves
+        moves={pokemon.moves}
+      />
+
       {(changePokemon>1)&&<button onClick={prevPokemon}>Previous pokémon</button>}
       <button onClick={nextPokemon}>Next pokémon</button>
       <button onClick={randomPokemon}>Random pokémon</button>
-    </div>
+    </main>
   )
 }
 
