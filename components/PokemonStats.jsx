@@ -1,10 +1,19 @@
 function PokemonStats(props){
     return(
-        <div>
-            <h2>Number: {props.id}</h2>
-            <h2>{props.type2? "Types: ": "Type: "}{props.type1}{props.type2 && `/${props.type2}`}</h2>
-            <h2>Height: {props.height/10}m</h2>
-            <h2>Weight: {props.weight/10}kg</h2>
+        <div className="pokemonStats">
+            <h2 className="pokemonStats--title">
+                <span>Number: </span>{props.id}
+            </h2>
+            <h2 className="pokemonStats--title">
+                <span>{props.type2? "Types: ": "Type: "}</span>
+                {props.type1}{props.type2 && `/${props.type2}`}
+            </h2>
+            <h2 className="pokemonStats--title">
+                <span>Height: </span>{props.height/10}m
+            </h2>
+            <h2 className="pokemonStats--title">
+                <span>Weight: </span>{props.weight/10}kg
+            </h2>
         </div>
     )
 }

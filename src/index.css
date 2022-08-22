@@ -1,3 +1,136 @@
 html{
   font-size: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  background-color: rgb(55, 55, 55);
+  color: white;
+  font-weight: 400;
+}
+
+button{
+  background-color: gray;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: white;
+  font-size: 1.6rem;
+  margin: 5px;
+}
+
+  button:hover{
+    cursor: pointer;
+    border: solid 2px rgb(255, 255, 255);
+  }
+
+/* Search bar */
+.searchbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .searchbar--searchbar-input{
+    background-color: transparent;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 1.8rem;
+    color: white;
+  }
+
+    .searchbar--searchbar-input:hover{
+      border: solid 2px rgb(255, 255, 255);
+    }
+
+  .searchbar--button{
+    font-size: 1.8rem;
+    border: solid 3px rgba(255, 255, 255, 0.603);
+  }
+
+    .searchbar--button:hover{
+      border: solid 3px rgb(255, 255, 255);
+    }
+
+/* Pokemon */
+.pokemon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .pokemon--name{
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .pokemon--img{
+    width: 250px;
+    margin-top: 10px;
+  }
+
+    .pokemon--img:hover{
+      margin-top: 0;
+      margin-bottom: 10px;
+      transition: ease-in 100ms;
+      cursor: pointer;
+    }
+
+  .pokemon--button{
+    position: relative;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+    .pokemon--button:hover{
+      top: -3px;
+      transition: ease-in 100ms;
+      border: transparent;
+    }
+
+
+/* Pokemon Stats */
+.pokemonStats--title{
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+  .pokemonStats--title>span{
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+/* Pokemon abilities */
+
+  .pokemonAbilities--title{
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+    .pokemonAbilities--title:hover{
+      cursor: pointer;
+    }
+
+  .pokemonAbilities--ability{
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+/* Pokemon Moves */
+
+.pokemonMoves--title{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+  .pokemonMoves--title:hover{
+    cursor: pointer;
+  }
+
+.pokemonMoves--move{
+  font-size: 1.4rem;
+  font-weight: 400;
 }

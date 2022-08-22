@@ -5,9 +5,11 @@ function Pokemon(props){
     const [facing, setFacing]= React.useState(true)
 
     return(
-        <div>
-            <h1>{props.name}</h1>
-            <img 
+        <div className="pokemon">
+            <h1 className="pokemon--name">{props.name}</h1>
+            <div>
+            <img
+                className="pokemon--img" 
                 src={shiny? facing?props.spriteFrontShiny: props.spriteBackShiny:
                      facing? props.spriteFront: props.spriteBack} 
                 onClick={() => {setShiny(prevShiny => !prevShiny)}}
@@ -15,8 +17,10 @@ function Pokemon(props){
             />
             
             <button
+            className="pokemon--button"
             onClick={()=>{setFacing(prevFacing => !prevFacing)}}
-            >{">"}</button>
+            >{facing?">":"<"}</button>
+            </div>
         </div>
     )
 }

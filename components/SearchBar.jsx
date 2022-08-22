@@ -4,7 +4,7 @@ function SearchBar(props){
     const [pokemon, setPokemon]= React.useState("");
 
     function handleClick(){
-        props.SearchFunc(pokemon)
+        props.SearchFunc(pokemon.toLowerCase())
     }
 
     function pokemonText(event){
@@ -12,10 +12,10 @@ function SearchBar(props){
     }
 
     return(
-        <div>
-            <input type="text" onChange={pokemonText}></input>
-            <button onClick={handleClick}>Search pokémon</button>
-        </div>
+        <form className="searchbar" onSubmit={(event)=>{event.preventDefault()}}>
+            <input className="searchbar--searchbar-input" type="text" onChange={pokemonText} On></input>
+            <button className="searchbar--button" onClick={handleClick}>Search pokémon</button>
+        </form>
     )
 }
 
