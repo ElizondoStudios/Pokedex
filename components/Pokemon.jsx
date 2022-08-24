@@ -8,13 +8,15 @@ function Pokemon(props){
         <div className="pokemon">
             <h1 className="pokemon--name">{props.name}</h1>
             <div>
-            <img
-                className="pokemon--img" 
-                src={shiny? facing?props.spriteFrontShiny: props.spriteBackShiny:
-                     facing? props.spriteFront: props.spriteBack} 
-                onClick={() => {setShiny(prevShiny => !prevShiny)}}
-                alt="pokemon"
-            />
+            <div className="pokemon--img--div">
+                <img
+                    className="pokemon--img" 
+                    src={shiny? facing?props.spriteFrontShiny: props.spriteBackShiny:
+                         facing? props.spriteFront: props.spriteBack} 
+                    onClick={() => {setShiny(prevShiny => !prevShiny)}}
+                    alt="pokemon"
+                />
+            </div>
             
             <button
             className="pokemon--button"

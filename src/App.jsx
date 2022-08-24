@@ -5,6 +5,7 @@ import PokemonStats from '../components/PokemonStats';
 import Pokemon from '../components/Pokemon';
 import PokemonAbilities from '../components/PokemonAbilities';
 import PokemonMoves from '../components/PokemonMoves';
+import ChangeButtons from '../components/ChangeButtons';
 
 import bulbasaur from './assets/bulbasaur';
 
@@ -56,6 +57,13 @@ function App() {
     <main>
       <SearchBar
         SearchFunc={SearchPokemon}
+        randomPokemon={randomPokemon}
+      />
+
+      <ChangeButtons
+        prevPokemon={prevPokemon}
+        nextPokemon={nextPokemon}
+        changePokemon={changePokemon}
       />
 
       <Pokemon
@@ -65,7 +73,7 @@ function App() {
         spriteBack={pokemon.sprites.back_default}
         spriteBackShiny={pokemon.sprites.back_shiny}
       />
-
+      <div>
       <PokemonStats
         id= {pokemon.id}
         height= {pokemon.height}
@@ -82,10 +90,9 @@ function App() {
       <PokemonMoves
         moves={pokemon.moves}
       />
+      </div>
+      
 
-      {(changePokemon>1)&&<button onClick={prevPokemon}>Previous pokémon</button>}
-      <button onClick={nextPokemon}>Next pokémon</button>
-      <button onClick={randomPokemon}>Random pokémon</button>
     </main>
   )
 }

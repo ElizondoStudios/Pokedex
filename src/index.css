@@ -10,7 +10,7 @@ body{
 }
 
 button{
-  background-color: gray;
+  background-color: rgb(69, 69, 69);
   border: solid 2px rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   color: white;
@@ -21,6 +21,13 @@ button{
   button:hover{
     cursor: pointer;
     border: solid 2px rgb(255, 255, 255);
+  }
+
+  button:active{
+    background-color: rgb(50, 50, 50);
+    border: solid 2px rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    transition: 75ms;
   }
 
 /* Search bar */
@@ -51,11 +58,59 @@ button{
       border: solid 3px rgb(255, 255, 255);
     }
 
+    .searchbar--button:active{
+      background-color: rgb(50, 50, 50);
+      border: solid 2px rgba(255, 255, 255, 0.3);
+      font-size: 1.7rem;
+      transition: 75ms;
+    }
+
+/* Change buttons */
+
+    .changeButtons--left{
+      background-color: transparent;
+      background-image: url("/src/assets/left-arrow.png");
+      background-repeat: no-repeat;
+      border: transparent;
+      background-size: 50px;
+      background-position: center;
+      width: 50px;
+      height: 80px;
+      position: absolute;
+      top: 162.5px;
+      margin-top: 0;
+      margin-left: 10px;
+    }
+
+    .changeButtons--right{
+      background-color: transparent;
+      background-image: url("/src/assets/right-arrow.png");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      border: transparent;
+      background-size: 50px;
+      background-position: center;
+      width: 50px;
+      height: 80px;
+      position: absolute;
+      top: 162.5px;
+      right: 0;
+      margin-top: 0;
+      margin-right: 10px;
+    }
+
+      .changeButtons--left:hover,.changeButtons--right:hover{
+        border: transparent;
+        margin: 0;
+        transition: ease-in 100ms;
+      }
+
 /* Pokemon */
 .pokemon{
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 327px;
 }
 
   .pokemon--name{
@@ -67,6 +122,13 @@ button{
   .pokemon--img{
     width: 250px;
     margin-top: 10px;
+  }
+
+  .pokemon--img--div{
+    background-image: url("../src/assets/pokeball-background.png");
+    background-repeat: no-repeat;
+    background-size: 250px;
+    display: inline-block;
   }
 
     .pokemon--img:hover{
