@@ -80,6 +80,7 @@ button{
       top: 162.5px;
       margin-top: 0;
       margin-left: 10px;
+      transition: ease-in-out 100ms;
     }
 
     .changeButtons--right{
@@ -97,12 +98,12 @@ button{
       right: 0;
       margin-top: 0;
       margin-right: 10px;
+      transition: ease-in-out 100ms;
     }
 
       .changeButtons--left:hover,.changeButtons--right:hover{
         border: transparent;
         margin: 0;
-        transition: ease-in 100ms;
       }
 
 /* Pokemon */
@@ -122,6 +123,8 @@ button{
   .pokemon--img{
     width: 250px;
     margin-top: 10px;
+    transition: ease-in-out 100ms;
+    padding: 0;
   }
 
   .pokemon--img--div{
@@ -129,12 +132,17 @@ button{
     background-repeat: no-repeat;
     background-size: 250px;
     display: inline-block;
+    /* animation: rotate-pokeball 3s ease-in-out infinite; */
   }
+
+    @keyframes rotate-pokeball{
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+    }
 
     .pokemon--img:hover{
       margin-top: 0;
       margin-bottom: 10px;
-      transition: ease-in 100ms;
       cursor: pointer;
     }
 
