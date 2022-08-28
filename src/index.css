@@ -119,28 +119,24 @@ button{
     font-size: 3rem;
     margin-bottom: 0;
   }
-
-  .pokemon--img{
-    width: 250px;
-    margin-top: 10px;
-    transition: ease-in-out 100ms;
-    padding: 0;
-  }
-
-  .pokemon--img--div{
+  
+  .pokemon--div{
     background-image: url("../src/assets/pokeball-background.png");
     background-repeat: no-repeat;
     background-size: 250px;
     display: inline-block;
-    /* animation: rotate-pokeball 3s ease-in-out infinite; */
+    animation: rotate-pokeball 3s ease-in-out infinite;
   }
 
-    @keyframes rotate-pokeball{
-      0% {transform: rotate(0deg);}
-      100% {transform: rotate(360deg);}
+    .pokemon--div--img{
+      width: 250px;
+      margin-top: 10px;
+      transition: ease-in-out 100ms;
+      padding: 0;
+      z-index: 2;
     }
 
-    .pokemon--img:hover{
+    .pokemon--div--img:hover{
       margin-top: 0;
       margin-bottom: 10px;
       cursor: pointer;

@@ -1,5 +1,5 @@
 import React from "react"
-
+import PokeballBackground from "../src/assets/pokeball-background.png"
 function Pokemon(props){
     const[shiny, setShiny]= React.useState(false)
     const [facing, setFacing]= React.useState(true)
@@ -8,13 +8,13 @@ function Pokemon(props){
         <div className="pokemon">
             <h1 className="pokemon--name">{props.name}</h1>
             <div>
-            <div className="pokemon--img--div">
+            <div className="pokemon--div">   
                 <img
-                    className="pokemon--img" 
+                    className="pokemon--div--img" 
                     src={shiny? facing?props.spriteFrontShiny: props.spriteBackShiny:
                          facing? props.spriteFront: props.spriteBack} 
                     onClick={() => {setShiny(prevShiny => !prevShiny)}}
-                    alt="pokemon"
+                    alt={props.name}
                 />
             </div>
             
