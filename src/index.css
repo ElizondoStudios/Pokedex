@@ -35,6 +35,8 @@ button{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
   .searchbar--searchbar-input{
@@ -43,7 +45,7 @@ button{
     border-radius: 5px;
     font-size: 1.6rem;
     color: white;
-    width: 25%;
+    /* width: 25%; */
   }
 
     .searchbar--searchbar-input:hover{
