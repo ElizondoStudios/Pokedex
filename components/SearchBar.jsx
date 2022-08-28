@@ -13,7 +13,7 @@ function SearchBar(props){
 
     return(
         <form className="searchbar" onSubmit={(event)=>{event.preventDefault()}}>
-            <input className="searchbar--searchbar-input" type="text" onChange={pokemonText} On></input>
+            <input className="searchbar--searchbar-input" type="text" onChange={pokemonText}></input>
             <button className="searchbar--button" onClick={handleClick}>Search pokémon</button>
             <button className="searchbar--button" onClick={props.randomPokemon}>Random pokémon</button>
         </form>
