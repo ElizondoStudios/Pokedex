@@ -225,12 +225,28 @@ button{
   max-height: 236px;
 }
 
+  .pokemonStats--stat-div{
+    display: flex;
+    flex-direction: row;
+  }
+
     .pokemonStats--stat-div--stats{
       font-size: 1.6rem;
       font-weight: 400;
+      display: inline-block;
+      margin-top: 7px;
+      margin-bottom: 7px;
     }
-    
+
       .pokemonStats--stat-div--stats>span{
         font-size: 1.8rem;
         font-weight: 600;
       }
+
+        .pokemonStats--stat-div--stats--stat-bar{
+          height: 10px;
+          background-color: white;
+          margin-left: 3px;
+          margin-right: 3px;
+          display: inline-block;
+        }
