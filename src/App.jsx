@@ -6,6 +6,7 @@ import Pokemon from '../components/Pokemon';
 import PokemonAbilities from '../components/PokemonAbilities';
 import PokemonMoves from '../components/PokemonMoves';
 import ChangeButtons from '../components/ChangeButtons';
+import PokemonStats from '../components/PokemonStats';
 
 import bulbasaur from './assets/bulbasaur';
 
@@ -73,22 +74,27 @@ function App() {
         spriteBack={pokemon.sprites.back_default}
         spriteBackShiny={pokemon.sprites.back_shiny}
       />
-      <div className="pokemon-info-div">
-        <PokemonInfo
-          id= {pokemon.id}
-          height= {pokemon.height}
-          weight= {pokemon.weight}
-          type1= {pokemon.types[0].type.name}
-          type2={pokemon.types.length>1? pokemon.types[1].type.name: ""}
-        />
-
-        <PokemonAbilities
-          ability1={pokemon.abilities[0].ability.name}
-          ability2={pokemon.abilities.length>1? pokemon.abilities[1].ability.name:""}
-        />
-
-        <PokemonMoves
-          moves={pokemon.moves}
+      <div className="pokemon-data">
+        <div className="pokemon-info-div">
+          <PokemonInfo
+            id= {pokemon.id}
+            height= {pokemon.height}
+            weight= {pokemon.weight}
+            type1= {pokemon.types[0].type.name}
+            type2={pokemon.types.length>1? pokemon.types[1].type.name: ""}
+          />
+  
+          <PokemonAbilities
+            ability1={pokemon.abilities[0].ability.name}
+            ability2={pokemon.abilities.length>1? pokemon.abilities[1].ability.name:""}
+          />
+  
+          <PokemonMoves
+            moves={pokemon.moves}
+          />
+        </div>
+        <PokemonStats
+          stats={pokemon.stats}
         />
       </div>
     </main>

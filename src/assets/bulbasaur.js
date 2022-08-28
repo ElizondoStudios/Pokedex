@@ -39,5 +39,25 @@ export default{
           name: "razor-wind"
         }
       }
+    ],
+    stats:[
+      {
+        base_stat: 45
+      },
+      {
+        base_stat: 49
+      },
+      {
+        base_stat: 49
+      },
+      {
+        base_stat: 65
+      },
+      {
+        base_stat: 65
+      },
+      {
+        base_stat: 45
+      }
     ]
 }

@@ -153,14 +153,21 @@ button{
       border: transparent;
     }
 
-/* Pokemon info */
+/* Pokemon Data */
+.pokemon-data{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Pokemon info div*/
 .pokemon-info-div{
   border: solid 3px white;
-  width: 40%;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-left: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 30%;
 }
+
 
 /* Pokemon Info */
 .pokemonInfo--title{
@@ -204,3 +211,22 @@ button{
   font-size: 1.4rem;
   font-weight: 400;
 }
+
+/* Pokemon Stats */
+.pokemonStats{
+  border: solid 3px white;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 30%;
+  max-height: 236px;
+}
+
+  .pokemonStats--stats{
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  
+    .pokemonStats--stats>span{
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
